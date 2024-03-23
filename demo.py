@@ -30,6 +30,10 @@ g.add_nodes_from(['Group 1.2', 'Group 2.2', 'Group 3.2'], subset=2)
 g.add_nodes_from(['Group 1.3', 'Group 2.3'], subset=3)
 g.add_nodes_from(['Group 1.4', 'Group 2.4'], subset=4)
 
+# Add Title to PLot
+plt.title('Multipartite Weighted Directed Graph')
+
+# Create a list of the edges and alphas (opacity)
 edges = []
 alphas = []
 for subset, subset_stuff in D_iter_current_previous.items():
@@ -42,19 +46,21 @@ for subset, subset_stuff in D_iter_current_previous.items():
                 edges.append((f'{prev_node}', f'{node}.{subset}'))
                 alphas.append(weight)
 
+# Make a dict of the edge labels
 edge_labels = dict(zip(edges, alphas))
 
-nodes = list(g.nodes())
-
+# Draw the nodes with the multipartite layout
 pos = nx.multipartite_layout(g, align='vertical')
 nx.draw(g, pos, with_labels=True, node_size=1500, font_size=8)
-nx.draw_networkx_edges(g, pos, edgelist=edges, alpha=alphas)
 
+# Draw the edges with their corresponding alphas
+nx.draw_networkx_edges(g, pos, edgelist=edges, alpha=alphas, arrows=True, node_size=1500)
+
+# Draw the edge labels with their corresponding alphas
 counter = 0
 for edge, alpha in edge_labels.items():
     if alpha > 0:
-        nx.draw_networkx_edge_labels(g, pos, edge_labels={edge: float(alpha)}, alpha=float(alpha))
+        nx.draw_networkx_edge_labels(g, pos, edge_labels={edge: float(alpha)}, alpha=float(alpha), font_size=7)
 
 # Show the plot
-plt.title('Multipartite Directed Graph')
 plt.show()
