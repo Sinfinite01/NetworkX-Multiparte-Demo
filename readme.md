@@ -23,7 +23,7 @@ python demo.py
 
 **Additional Resources**
 
-For more information about the development process and the inspiration behind this project, refer to the following Stack Overflow post:
+For more information about the development process and the inspiration behind this project, refer to the following Stack Overflow post that this post is a direct answer to:
 
 [How to use the `pos` argument in NetworkX to create a flowchart-style graph](https://stackoverflow.com/questions/39801880/how-to-use-the-pos-argument-in-networkx-to-create-a-flowchart-style-graph)
 
