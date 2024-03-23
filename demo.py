@@ -52,7 +52,6 @@ nx.draw_networkx_edges(g, pos, edgelist=edges, alpha=alphas)
 
 counter = 0
 for edge, alpha in edge_labels.items():
-    print(edge, alpha)
     if alpha > 0:
         nx.draw_networkx_edge_labels(g, pos, edge_labels={edge: float(alpha)}, alpha=float(alpha))
 
