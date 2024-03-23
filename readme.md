@@ -17,6 +17,10 @@ To run the demo, execute the following command in your terminal or command promp
 python demo.py
 ```
 
+**Result**
+
+![Flowchart](images/multipartite_weighted_directed_graph.png)
+
 **Additional Resources**
 
 For more information about the development process and the inspiration behind this project, refer to the following Stack Overflow post:
