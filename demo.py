@@ -2,25 +2,25 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 D_iter_current_previous =    {
-        1: {
-            "Group 1":{"sample_0":0.5, "sample_1":0.5, "sample_2":0, "sample_3":0, "sample_4":0},
-            "Group 2":{"sample_0":0, "sample_1":0, "sample_2":1, "sample_3":0, "sample_4":0},
-            "Group 3":{"sample_0":0, "sample_1":0, "sample_2":0, "sample_3":0.5, "sample_4":0.5}
-            },
-        2: {
-            "Group 1":{"Group 1":1, "Group 2":0, "Group 3":0},
-            "Group 2":{"Group 1":0, "Group 2":1, "Group 3":0},
-            "Group 3":{"Group 1":0, "Group 2":0, "Group 3":1}
-            },
-        3: {
-            "Group 1":{"Group 1":0.25, "Group 2":0, "Group 3":0.75},
-            "Group 2":{"Group 1":0.25, "Group 2":0.75, "Group 3":0}
-            },
-        4: {
-            "Group 1":{"Group 1":1, "Group 2":0},
-            "Group 2":{"Group 1":0.25, "Group 2":0.75}
-            }
+    1: {
+        "Group 1":{"sample_0":0.5, "sample_1":0.5, "sample_2":0, "sample_3":0, "sample_4":0},
+        "Group 2":{"sample_0":0, "sample_1":0, "sample_2":1, "sample_3":0, "sample_4":0},
+        "Group 3":{"sample_0":0, "sample_1":0, "sample_2":0, "sample_3":0.5, "sample_4":0.5}
+        },
+    2: {
+        "Group 1":{"Group 1":1, "Group 2":0, "Group 3":0},
+        "Group 2":{"Group 1":0, "Group 2":1, "Group 3":0},
+        "Group 3":{"Group 1":0, "Group 2":0, "Group 3":1}
+        },
+    3: {
+        "Group 1":{"Group 1":0.25, "Group 2":0, "Group 3":0.75},
+        "Group 2":{"Group 1":0.25, "Group 2":0.75, "Group 3":0}
+        },
+    4: {
+        "Group 1":{"Group 1":1, "Group 2":0},
+        "Group 2":{"Group 1":0.25, "Group 2":0.75}
         }
+    }
 
 # Create a NextworkX directed graph
 g = nx.DiGraph()
@@ -30,7 +30,7 @@ g.add_nodes_from(['Group 1.2', 'Group 2.2', 'Group 3.2'], subset=2)
 g.add_nodes_from(['Group 1.3', 'Group 2.3'], subset=3)
 g.add_nodes_from(['Group 1.4', 'Group 2.4'], subset=4)
 
-# Add Title to PLot
+# Add Title to Plot
 plt.title('Multipartite Weighted Directed Graph')
 
 # Create a list of the edges and alphas (opacity)
